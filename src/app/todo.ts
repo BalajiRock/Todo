@@ -2,6 +2,6 @@ export class Todo
 {
   "sno":number
   "title":String
-  "decs":String
+  "desc":String
   "active":boolean
 }
