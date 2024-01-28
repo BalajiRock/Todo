@@ -4,11 +4,11 @@
   <form (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
-      <input type="text" required name="title" [(ngModel)]="title" class="form-control" id="title" aria-describedby="emailHelp">
+      <input type="text" name="title" [(ngModel)]="title" class="form-control" id="title" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
       <label for="desc" class="form-label">Description</label>
-      <input type="text" required name="decs" [(ngModel)]="desc" class="form-control" id="desc">
+      <input type="text" name="decs" [(ngModel)]="desc" class="form-control" id="desc">
     </div>
     <button type="submit" class="btn btn-sm btn-primary">Add task</button>
   </form>

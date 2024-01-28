@@ -1,6 +1,15 @@
 
-<div class="my-3">
-  <h5>{{todo.title}} </h5>
-  <p>{{todo.desc}} </p>
-  <button class="btn btn-danger bt-sm"  (click)="onClick(todo)">Delete</button>
+<div class="my-3 ">
+  <h5 [ngClass]="{'strike':!todo.active}" class="text-capitalize"  >{{todo.title}} </h5>
+  <p [ngClass]="{'strike':!todo.active}" class="font-weight-bold">{{todo.desc}} </p>
+
+  <div class="container d-inline-flex">
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="strick(todo) " value="done" >
+      <label class="form-check-label" for="exampleCheck1">Done</label>
+    </div>
+    <div class="mx-5">
+      <button class="btn btn-danger bt-sm "  (click)="onClick(todo)">Delete</button>
+    </div>
+  </div>
 </div>
